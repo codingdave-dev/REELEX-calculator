@@ -30,43 +30,44 @@
         class="input_text"
         id="ProductODIn"
         name="ProductODIn"
+        value="0.25"
       />
     </div>
 
     <br />
     <div>
       <label for="CoilLength">Coil Length:</label>
-      <input type="text" class="input_text" id="CoilLength" name="CoilLength"  />
+      <input type="text" class="input_text" id="CoilLength" name="CoilLength" value="1000" />
     </div>
 
     <br />
     <div>
       <label for="LowerRatio">Lower Ratio:</label>
-      <input type="text" class="input_text" id="LowerRatio" name="LowerRatio" />
+      <input type="text" class="input_text" id="LowerRatio" name="LowerRatio" value="37"/>
     </div>
 
     <br />
     <div>
       <label for="UpperRatio">Upper Ratio:</label>
-      <input type="text" class="input_text" id="UpperRatio" name="UpperRatio" />
+      <input type="text" class="input_text" id="UpperRatio" name="UpperRatio" value="43"/>
     </div>
 
     <br />
     <div>
       <label for="Density">Density:</label>
-      <input type="text" class="input_text" id="Density" name="Density" />
+      <input type="text" class="input_text" id="Density" name="Density" value="1.00"/>
     </div>
 
     <br />
     <div>
       <label for="HoleSize">Hole Size:</label>
-      <input type="text" class="input_text" id="HoleSize" name="HoleSize" />
+      <input type="text" class="input_text" id="HoleSize" name="HoleSize" value="90"/>
     </div>
 
     <br />
     <div>
       <label for="HoleTaper">Hole Taper:</label>
-      <input type="text" class="input_text" id="HoleTaper" name="HoleTaper" />
+      <input type="text" class="input_text" id="HoleTaper" name="HoleTaper" value="1.00"/>
     </div>
 
     <br />
@@ -82,7 +83,7 @@
       <input type="radio" id="MandrelSize8" name="MandrelSize" value="8" />
       8 Inches<br />
 
-      <input type="radio" id="MandrelSize10" name="MandrelSize" value="10" />
+      <input type="radio" id="MandrelSize10" name="MandrelSize" value="10" checked/>
       10 Inches<br />
     </div>
 
@@ -96,7 +97,7 @@
       <input type="radio" id="EndformSize12" name="EndformSize" value="12" />
       12 Inches<br />
 
-      <input type="radio" id="EndformSize18" name="EndformSize" value="19" />
+      <input type="radio" id="EndformSize18" name="EndformSize" value="19" checked/>
       19 Inches<br />
 
       <input type="radio" id="EndformSize21" name="EndformSize" value="21" />
@@ -122,6 +123,103 @@
 
     <br>
     <br>
+    <br>
+    <h1>Machine Coil Parameters</h1>
+    <br>
+    <div>
+      <label for="MinimumAverageGainSetting">Minimum Average Gain Setting:</label>
+      <input
+              type="text"
+              class="input_text"
+              id="MinimumAverageGainSetting"
+              name="MinimumAverageGainSetting"
+              disabled
+      />
+    </div>
+    <br>
+    <div>
+      <label for="MaximumAverageGainSetting">Maximum Average Gain Setting:</label>
+      <input
+              type="text"
+              class="input_text"
+              id="MaximumAverageGainSetting"
+              name="MaximumAverageGainSetting"
+              disabled
+      />
+    </div>
+    <br>
+    <div>
+      <label for="CoilSizeAtMinimumGain">Coil Size At Minimum Gain:</label>
+      <input
+              type="text"
+              class="input_text"
+              id="CoilSizeAtMinimumGain"
+              name="CoilSizeAtMinimumGain"
+              disabled
+      />
+    </div>
+    <br>
+    <div>
+      <label for="CoilSizeAtMaximumGain">Coil Size At Maximum Gain:</label>
+      <input
+              type="text"
+              class="input_text"
+              id="CoilSizeAtMaximumGain"
+              name="CoilSizeAtMaximumGain"
+              disabled
+      />
+    </div>
+    <br>
+    <div>
+        <label for="CoilLengthAtMinimum">Coil Length At Minimum:</label>
+        <input
+                type="text"
+                class="input_text"
+                id="CoilLengthAtMinimum"
+                name="CoilLengthAtMinimum"
+                disabled
+        />
+    </div>
+    <br>
+    <div>
+        <label for="CoilLengthAtMaximum">Coil Length At Maximum:</label>
+        <input
+                type="text"
+                class="input_text"
+                id="CoilLengthAtMaximum"
+                name="CoilLengthAtMaximum"
+                disabled
+        />
+    </div>
+
+
+<!--    <br>-->
+<!--    <h1>Select Gain Setting between Min and Max</h1>-->
+<!--    <br>-->
+<!--    <div>-->
+<!--      <label for="EnterDesiredGainSetting">Enter Desired Gain Setting:</label>-->
+<!--      <input-->
+<!--              type="text"-->
+<!--              class="input_text"-->
+<!--              id="EnterDesiredGainSetting"-->
+<!--              name="EnterDesiredGainSetting"-->
+<!--              disabled-->
+<!--      />-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div>-->
+<!--      <label for="CorrespondingCalculatedCoilDiameter">Corresponding Calculated Coil Diameter:</label>-->
+<!--      <input-->
+<!--              type="text"-->
+<!--              class="input_text"-->
+<!--              id="CorrespondingCalculatedCoilDiameter"-->
+<!--              name="CorrespondingCalculatedCoilDiameter"-->
+<!--              disabled-->
+<!--      />-->
+<!--    </div>-->
+
+
+    <h1>Estimated Package Size</h1>
     <br>
     <div>
       <label for="CalculatedCoilDiameter">Calculated Coil Diameter:</label>

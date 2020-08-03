@@ -45,7 +45,7 @@ function calculate() {
 
     // AXIOS REQUEST
     axios
-        .get("https://us-central1-cablecalculator-44098.cloudfunctions.net/REELEX_calculator", {
+        .get("http://localhost:5001/cablecalculator-44098/us-central1/REELEX_calculator", {
             params: {
                 req_calculatorUnits,
                 req_productODIn,
@@ -61,12 +61,24 @@ function calculate() {
             },
         })
         .then((res) => {
-            const calculatedCoilDiameter = res.data.calculatedCoilDiameter
+            const minimumGain = res.data.minimumGain
+            const maximumGain = res.data.maximumGain
+            const lowerDiameter = res.data.lowerDiameter.toFixed(2)
+            const upperDiameter = res.data.upperDiameter.toFixed(2)
+            const lowerCoilLength = res.data.lowerCoilLength.toFixed(1)
+            const upperCoilLength = res.data.upperCoilLength.toFixed(1)
+            const calculatedCoilDiameter = res.data.calculatedCoilDiameter.toFixed(2)
             const height = res.data.height
             const length = res.data.length
             const width = res.data.width
             const willItFit = res.data.willItFit
 
+            document.getElementById("MinimumAverageGainSetting").value = minimumGain;
+            document.getElementById("MaximumAverageGainSetting").value = maximumGain;
+            document.getElementById("CoilSizeAtMinimumGain").value = lowerDiameter;
+            document.getElementById("CoilSizeAtMaximumGain").value = upperDiameter;
+            document.getElementById("CoilLengthAtMinimum").value = lowerCoilLength;
+            document.getElementById("CoilLengthAtMaximum").value = upperCoilLength;
             document.getElementById("CalculatedCoilDiameter").value = calculatedCoilDiameter;
             document.getElementById("EstimatedPackageHeight").value = height;
             document.getElementById("EstimatedPackageDepth").value = length;
