@@ -44,7 +44,7 @@ function calculate() {
   // AXIOS REQUEST
   axios
     .get(
-      "http://localhost:5001/cablecalculator-44098/us-central1/REELEX_calculator",
+      "https://us-central1-cablecalculator-44098.cloudfunctions.net/REELEX_calculator",
       {
         params: {
           req_calculatorUnits,
