@@ -16,14 +16,14 @@
     <h4>A - Input Section</h4>
     <div>
       <label for="CalculatorUnits">Select Units:</label>
-      <select name="CalculatorUnits" id="CalculatorUnits">
+      <select name="CalculatorUnits" id="CalculatorUnits" onchange="changeUnits()">
         <option value="imperial">Imperial</option>
         <option value="metric">Metric</option>
       </select>
     </div>
     <br />
     <div>
-      <label for="ProductODIn">Product Diameter:</label>
+      <label for="ProductODIn" id="ProductDiameterLabel">Product Diameter (in inches):</label>
       <input
         type="text"
         class="input_text"
@@ -35,7 +35,7 @@
 
     <br />
     <div>
-      <label for="CoilLength">Coil Length:</label>
+      <label for="CoilLength" id="CoilLengthLabel">Coil Length (in feet):</label>
       <input
         type="text"
         class="input_text"
@@ -48,43 +48,38 @@
     <div>
       <label for="MandrelSize">Mandrel Diameter:</label>
       <br />
-      <input type="radio" id="MandrelSize4" name="MandrelSize" value="4" />
-      4 Inches<br />
+      <input type="radio" id="MandrelSize1" name="MandrelSize" value="4" />
+      <label for="MandrelSize1" id="MandrelSize1Label">4 inches</label>
+      <br />
 
-      <input type="radio" id="MandrelSize6" name="MandrelSize" value="6" />
-      6 Inches<br />
+      <input type="radio" id="MandrelSize2" name="MandrelSize" value="6" />
+      <label for="MandrelSize2" id="MandrelSize2Label">6 inches</label>
+      <br />
 
-      <input
-        type="radio"
-        id="MandrelSize8"
-        name="MandrelSize"
-        value="8"
-        checked
-      />
-      8 Inches<br />
+      <input type="radio" id="MandrelSize3" name="MandrelSize" value="8" checked/>
+      <label for="MandrelSize3" id="MandrelSize3Label">8 inches</label>
+      <br />
 
-      <input type="radio" id="MandrelSize10" name="MandrelSize" value="10" />
-      10 Inches<br />
+      <input type="radio" id="MandrelSize4" name="MandrelSize" value="10" />
+      <label for="MandrelSize4" id="MandrelSize4Label">10 inches</label>
+      <br />
     </div>
 
     <br />
     <div>
       <label for="EndformSize">Endform Diameter:</label>
       <br />
-      <input type="radio" id="EndformSize12" name="EndformSize" value="12" />
-      12 Inches<br />
+      <input type="radio" id="EndformSize1" name="EndformSize" value="12" />
+      <label for="EndformSize1" id="EndformSize1Label">12 Inches</label>
+      <br />
 
-      <input
-        type="radio"
-        id="EndformSize18"
-        name="EndformSize"
-        value="18"
-        checked
-      />
-      18 Inches<br />
+      <input type="radio" id="EndformSize2" name="EndformSize" value="18" checked/>
+      <label for="EndformSize2" id="EndformSize2Label">18 Inches</label>
+      <br />
 
-      <input type="radio" id="EndformSize21" name="EndformSize" value="21" />
-      21 Inches<br />
+      <input type="radio" id="EndformSize3" name="EndformSize" value="21" />
+      <label for="EndformSize3" id="EndformSize3Label">21 Inches</label>
+      <br />
     </div>
 
     <br />
@@ -100,7 +95,7 @@
     </div>
     <br />
     <div>
-      <label for="TraverseStroke">Traverse Stroke:</label>
+      <label for="TraverseStroke" id="TraverseStrokeLabel">Traverse Stroke (in inches):</label>
       <input
         type="text"
         class="input_text"
@@ -143,7 +138,7 @@
         />
         <div>
           <br />
-          <label for="MinDia">Coil Size At Minimum Gain:</label>
+          <label for="MinDia" id="MinDiaLabel">Coil Size At Minimum Gain (in inches):</label>
           <input
             type="text"
             class="input_text"
@@ -154,7 +149,7 @@
         </div>
         <br />
         <div>
-          <label for="MaxDia">Coil Size At Maximum Gain:</label>
+          <label for="MaxDia" id="MaxDiaLabel">Coil Size At Maximum Gain (in inches):</label>
           <input
             type="text"
             class="input_text"
@@ -275,7 +270,7 @@
   <br>
   <br>
   <div>
-    <label for="PackageCoilSize">Calculated Coil Size:</label>
+    <label for="PackageCoilSize" id="PackageCoilSizeLabel">Calculated Coil Size (in inches):</label>
     <input
             type="text"
             class="input_text"
@@ -286,7 +281,7 @@
   </div>
   <br>
   <div>
-    <label for="PackageHeight">A - Height:</label>
+    <label for="PackageHeight" id="PackageHeightLabel">A - Height (in inches):</label>
     <input
             type="text"
             class="input_text"
@@ -297,7 +292,7 @@
   </div>
   <br>
   <div>
-    <label for="PackageWidth">B - Width:</label>
+    <label for="PackageWidth" id="PackageWidthLabel">B - Width (in inches):</label>
     <input
             type="text"
             class="input_text"
@@ -308,7 +303,7 @@
   </div>
   <br>
   <div>
-    <label for="PackageDepth">C - Depth:</label>
+    <label for="PackageDepth" id="PackageDepthLabel">C - Depth (in inches):</label>
     <input
             type="text"
             class="input_text"
@@ -319,7 +314,7 @@
   </div>
   <br>
   <div>
-    <label for="PackageTubeLength">D - Tube Length:</label>
+    <label for="PackageTubeLength">D - Tube Length (in inches):</label>
     <input
             type="text"
             class="input_text"
