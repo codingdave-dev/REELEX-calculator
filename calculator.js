@@ -200,6 +200,7 @@ function changeUnits() {
 
     // TRAVERSE STROKE
     document.getElementById("TraverseStrokeLabel").innerHTML = "Traverse Stroke (in inches):"
+    document.getElementById("TraverseStroke").value = 12;
 
     // CALCULATED COIL SIZE
     document.getElementById("PackageCoilSizeLabel").innerHTML = "Calculated Coil Size (in inches):"
@@ -233,6 +234,7 @@ function changeUnits() {
 
     // TRAVERSE STROKE
     document.getElementById("TraverseStrokeLabel").innerHTML = "Traverse Stroke (in mm):"
+    document.getElementById("TraverseStroke").value = 305;
 
     // CALCULATED COIL SIZE
     document.getElementById("PackageCoilSizeLabel").innerHTML = "Calculated Coil Size (in mm):"
@@ -243,5 +245,12 @@ function changeUnits() {
     document.getElementById("PackageDepthLabel").innerHTML = "C - Depth (in mm):"
 
 
+  }
+
+  if (document.getElementById("form2").style.display === "block") {
+    document.getElementById("form2").style.display = "none";
+  }
+  if (document.getElementById("packageSize").style.display === "block") {
+    document.getElementById("packageSize").style.display = "none";
   }
 }
